@@ -10,53 +10,26 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="styles.css">
+        
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script>
-            function rockPaperScissors(){
-                let playerWins = 0;
-                let computerWins = 0;
-                let arg = window.prompt('Please enter rock, paper or scissors').toLowerCase()
-                if (arg ==='rock' || arg === 'paper' || arg ==='scissors'){   
-                    const responses = ['rock', 'paper','scissors']
-                    let random = Math.floor(Math.random()*3)
-                    let response = responses[random]
-                    console.log(response)
-                    if (arg == 'rock' && response == 'paper'){console.log('Paper beats rock. I win'); computerWins++}
-                    else if (arg == 'rock' && response == 'scissor'){console.log('Rock beats scissors. You win'); playerWins++}
-                    else if (arg == 'paper' && response == 'rock'){console.log('Paper beats rock. You win'); playerWins++}
-                    else if (arg == 'paper' && response == 'scissors'){console.log('Scissors beats paper. I win'); computerWins++}
-                    else if (arg == 'scissors' && response == 'paper'){console.log('Scissors beats paper. You win'); playerWins++}
-                    else if (arg == 'scissors' && response == 'rock'){console.log('Rock beats scissors. I win'); computerWins++}
-                    else {console.log('It is a Tie!')}
-                    
-                } else {
-                    console.log('that is not a valid input')
-                } return [playerWins, computerWins]
-                
-            }
-            function playGame(){
-               let playerTotalWins = 0;
-               let computerTotalWins = 0;
-               for (let i = 0; i < 5; i++){
-                let [playerWins, computerWins] = rockPaperScissors();
-                playerTotalWins += playerWins;
-                computerTotalWins += computerWins;
-               }
-               if (playerTotalWins > computerTotalWins){
-                console.log("Congratulations. You're the winner")
-               } else if (playerTotalWins < computerTotalWins) {
-                console.log("Sorry, better luck next time.")
-               } else {
-                console.log("What are the odds? It's a tie!")
-               }
-               console.log(playerTotalWins, computerTotalWins)
-            }
-        </script>
+        <div class="title-container">
+            <h1 id="title">ROCK, PAPER OR SCISSORS!</h1>
+        </div>
+       <div class="dialogue">
+        <h1 id="computer-pick"></h1>
+        <h2 id="round-response"></h2>
+       </div>
+       <div class="scoreboard">
+            <h1 id="player-wins"></h1>
+            <h1 id="computer-wins"></h1>
+       </div>
+       <div class="player-controls">
+        <img src="./assets/rock.png" class="controls" id="rock">
+        <img src="./assets/paper.png" class="controls" id="paper">
+        <img src="./assets/scissors.png" class="controls"id="scissors">
+       </div>
+       <script src="index.js" defer></script>
     </body>
 </html>

@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    background-color: darkcyan;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: linen;
+    font-size: 72px; /* Adjust font size for smaller screens */
+}
+
+.dialogue {
+    margin-bottom: 0;
+}
+
+#round-response {
+    height: 100px; 
+    overflow: auto;
+    color: linen;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center; 
+    font-size: 48px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: space-around;
+}
+
+#player-wins,
+#computer-wins {
+    padding: 5%;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: linen;
+    max-width: 200px; /* Set a maximum width */
+    text-align: center; /* Center text */
+    font-size: 72px; /* Adjust font size for smaller screens */
+}
+
+.controls {
+    max-width: 500px;
+    max-height: 400px; /* Set a maximum height for images */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    #title {
+        font-size: 32px;
+    }
+
+    #player-wins,
+    #computer-wins {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .controls {
+        max-width: 150px; /* Adjust max-width for smaller screens */
+        max-height: 100px; /* Adjust max-height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #title {
+        font-size: 24px;
+    }
+    #round-response{
+        font-size: 18px;
+    }
+
+    #player-wins,
+    #computer-wins {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .controls {
+        max-width: 100px; /* Adjust max-width for smaller screens */
+        max-height: 80px; /* Adjust max-height for smaller screens */
+    }
+}
